@@ -43,7 +43,9 @@ jobs:
           cd infix
           git clean -ffdx
           git checkout main
+          git clean -ffdx
           git reset --hard origin/main
+          git submodule update --init --recursive
           cd ..
 
           if [[ -n "$(git diff --exit-code infix)" ]]; then
