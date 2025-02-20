@@ -41,6 +41,7 @@ jobs:
           fi
 
           cd infix
+          git fetch --recurse-submodules
           git clean -ffdx
           git checkout main
           git clean -ffdx
